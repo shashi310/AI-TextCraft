@@ -11,12 +11,12 @@ const openai = new OpenAI({apiKey: process.env.OPENAI_API_KEY ||"sk-qIkJ7i3ZeqT7
 Text.post('/generate',verify, async (req, res) => {
     try { 
         const { topic, language, blockedWord } = req.body;
-        console.log(topic, language,blockedWord );
+        // console.log(topic, language,blockedWord );
 
         const response = await main(topic, language, blockedWord)
        //saving Data in history model
         let data= response[0].message.content
-        console.log("USER ID", req.body);
+        // console.log("USER ID", req.body);
         const history = new HistoryModel({
           body: data,
           userID: req.body.userId,
@@ -62,12 +62,12 @@ async function main(topic, language, blockedWord) {
 Text.post('/consize',verify, async (req, res) => {
   try { 
       const { info,length, blockedWord } = req.body;
-      console.log(info, length,blockedWord );
+      // console.log(info, length,blockedWord );
 
       const response = await main2(info, length, blockedWord)
      //saving Data in history model
       let data= response[0].message.content
-      console.log("USER ID", req.body);
+      // console.log("USER ID", req.body);
       const history = new HistoryModel({
         body: data,
         userID: req.body.userId,
@@ -111,12 +111,12 @@ async function main2(info, length, blockedWord) {
 Text.post('/translate',verify, async (req, res) => {
   try { 
       const { info,language } = req.body;
-      console.log(info, language );
+      // console.log(info, language );
 
       const response = await main3(info, language)
      //saving Data in history model
       let data= response[0].message.content
-      console.log("USER ID", req.body);
+      // console.log("USER ID", req.body);
       const history = new HistoryModel({
         body: data,
         userID: req.body.userId,
