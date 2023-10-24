@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, Heading, Spacer, useSafeLayoutEffect,ListItem,List } from '@chakra-ui/react'
+import { Box, Divider, Flex, Heading, Spacer, useSafeLayoutEffect,ListItem,List, Spinner } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import { Select,Button,Input,Center } from '@chakra-ui/react'
 import axios from 'axios';
@@ -62,9 +62,18 @@ console.log(currentPage);
 <Box>
       {data?.length > 0 ? (
         <Box>
-          <Heading fontSize='2xl' textAlign='center' mb='2' mt='2' color='teal.500'>
+          <Flex gap="20%">
+          <Heading w="60%" fontSize='2xl' textAlign='center' mb='2' mt='2' color='teal.500'>
             History of {user.name}'s Interactions
           </Heading>
+          <Select w="20%"  value={itemsPerPage} onChange={(e)=>setItemsPerPage(e.target.value)}>
+            <option value="3">Items per page</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+
+          </Select>
+          </Flex>
           <List>
             {reversedItems.map((item, index) => (
               <Box
@@ -118,7 +127,9 @@ console.log(currentPage);
         </Box>
       ) : (
         <Box textAlign='center'>
-          <p>Loading...</p>
+        <Box textAlign='center'>
+            <Spinner size='xl' color='teal.500' thickness='4px' />
+        </Box>
         </Box>
       )}
     </Box>
