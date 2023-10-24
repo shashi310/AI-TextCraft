@@ -26,7 +26,7 @@
 
 <div> <h3> Landing Page </h3> 
   
-  <img src="https://i.ibb.co/K0RXRBq/Landing.png"/>
+  <img src="https://i.ibb.co/DgsBLXY/Screenshot-691.png"/>
  </div>
 
 <div> <h3>Dashboard Page</h3> 
