@@ -8,7 +8,7 @@ HistoryRoute.get("/:id", async (req, res) => {
 
   try {
     const data = await HistoryModel.find({ userID: id });
-    console.log(data, "DATA");
+    // console.log(data, "DATA");
     res.status(200).send(data);
   } catch (err) {
     res.status(400).send({ msg: err.message });
