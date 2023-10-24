@@ -124,7 +124,7 @@ const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
 ) : (
   res ? (
     <Box border='2px' borderColor='gray.400' p='5px' mx="1%" mt="4%">
-      <Center bg='tomato' fontSize='24px' color='white' p="30px" className='res'>
+      <Center bg='tomato' fontSize='22px' color='white' p="20px" className='res'>
         {res}
       </Center>  
     </Box>
