@@ -1,8 +1,8 @@
 <h1>AI-TextCraft React App</h1>
 
 <h4> To run AI-TextCraft website clone click below link</h4>
-<ul> <li><a href="https://frolicking-pothos-d22f5d.netlify.app/"> Netlify Deployed Link </a></li> </ul>
-<ul> <li><a href=""> Backedn Delployed Link </a></li> </ul>
+<ul> <li><a href="https://idyllic-naiad-6fa694.netlify.app/"> Netlify Deployed Link </a></li> </ul>
+<ul> <li><a href="https://aitextcraft.onrender.com"> Backedn Delployed Link </a></li> </ul>
 
 <div> <p>This project endeavors to demonstrate the transformative potential of integrating OpenAI's API into data processing tasks, revolutionizing how organizations handle and leverage their data assets. By combining cutting-edge technology with user-centric design, this application will empower users to extract valuable insights from their data efficiently and effectively and deploying a comprehensive application that seamlessly integrates with OpenAI to perform three critical tasks: 1-Explaination Generation 2-Summarization 3-Language Translation:</p>
 <br />
